@@ -1,4 +1,5 @@
 
+%отступы
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \emergencystretch=5pt 
@@ -44,9 +45,19 @@
 
 \usepackage{amsthm}
 
+%Стиль страницы
 \usepackage{fancyhdr}
 \pagestyle{plain}
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
+
+% языковая верстка при XeLatex
+\usepackage{polyglossia}
+\usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+\setmainfont[Ligatures={TeX,Historic}]{CMU Serif} %% задаёт основной шрифт документа
+
+
+%%%% языковая верстка при PdfLatex
+%\usepackage[utf8]{inputenc}
+%\usepackage[russian]{babel}
 
 \setcounter{page}{2}  % номер первой страницы журнала

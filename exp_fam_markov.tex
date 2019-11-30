@@ -7,8 +7,6 @@ p(x) = \pi (x_1) \prod_{s=1}^{n-1} p_{x_s x_{s+1}},\\
 q(x) = \phi (x_1) \prod_{s=1}^{n-1} q_{x_s x_{s+1}}. 
 \end{align}
 
-\newcommand{\ev}{\mathbf{v}_\ast}
-
 Построив по $P, Q$ $R_\alpha$ \eqref{R_elements_eq}, найдем cз $\lambda_\ast = \lambda_\ast (\alpha)$ и св $\ev = \ev(\al)$ Перрона-Фробениуса матрицы $R_\alpha^{\top}.$
 
 Для получения стохастический матрицы используем лемму \ref{NEOTR_V_STOCH} и получим 
@@ -38,3 +36,15 @@ r_{ij} & = \frac{1}{Z(\al)} \exp \left( h_0 (i,j) + \al h_1 (i,j) + \ell_1(j, \a
 & \ell_1(j, \al) = \ln {\ev}_j\\
 & \ell_2(i, \al) = \ln {\ev}_i
 \end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+В случае одномерного экспоненциального семейства цепей Маркова по двум стохастическим матрицам $P = (P_{ij})_{i, j = 1}^n$ и $Q = (Q_{ij})_{i, j = 1}^n,$ с совпадающим множеством пар индексов нулевых элементов: $P_{ij} = 0 \Longleftrightarrow Q_{ij} = 0,$ строится матрица $R(\alpha) = (R_{ij}(\alpha))_{i, j = 1}^n,$ $\alpha \in \R$ по формуле \eqref{R_elements_eq}.
+
+\begin{equation}
+\label{R_elements_eq}
+R_{ij} (\alpha) = \begin{cases}
+0, \quad P_{ij} = 0, \\
+P_{ij}^\alpha Q_{ij}^{1-\alpha},\  P_{ij} \neq 0.
+\end{cases}
+\end{equation}
