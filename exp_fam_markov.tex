@@ -1,0 +1,40 @@
+Имеем две цепи Маркова, $\mathrm{MC}_\mathcal{D}(\pi, P)$ и $\mathrm{MC}_\mathcal{D}(\phi, Q),$ по которым будет строиться одномерное экспоненциальное семейство. В случае двоичных цепей Маркова первого порядка $\mathcal{D} = \B$; второго порядка, сведенного к первому, $\mathcal{D} = \B^2$.
+
+Пусть $x = (x_1, ..., x_n) \in \mathcal{D}^n,$ т. ч. $\pi (x_1), \phi(x_1) \neq 0,$ $p_{x_s x_{s+1}}, q_{x_s x_{s+1}} \neq 0,  s = \overline{1, n-1}.$ Конечномерные распределения $\mathrm{MC}_\mathcal{D}(\pi, P)$ и $\mathrm{MC}_\mathcal{D}(\phi, Q)$ имеют вид 
+
+\begin{align}
+p(x) = \pi (x_1) \prod_{s=1}^{n-1} p_{x_s x_{s+1}},\\
+q(x) = \phi (x_1) \prod_{s=1}^{n-1} q_{x_s x_{s+1}}. 
+\end{align}
+
+\newcommand{\ev}{\mathbf{v}_\ast}
+
+Построив по $P, Q$ $R_\alpha$ \eqref{R_elements_eq}, найдем cз $\lambda_\ast = \lambda_\ast (\alpha)$ и св $\ev = \ev(\al)$ Перрона-Фробениуса матрицы $R_\alpha^{\top}.$
+
+Для получения стохастический матрицы используем лемму \ref{NEOTR_V_STOCH} и получим 
+
+\begin{equation}
+\label{EXP_FAM}
+\mathcal{R} (\al) = \left(r_{ij} = \frac{1}{\lambda_\ast} \frac{{\ev}_j}{{\ev}_i} p_{ij}^\alpha q_{ij}^{1-\alpha}, \ i,j \in \mathcal{D} \right)
+\end{equation}
+
+Конечномерное распределение $\mathrm{MC}_\mathcal{D}(Z_{\pi\phi}^{-1} \pi^\al \phi^\ea, \mathcal{R}(\alpha)):$  
+
+\begin{align}
+r(x) & = \frac{1}{Z_{\pi\phi}} \pi_{x_1}^\al \phi_{x_1}^\ea  \prod_{s=1}^{n-1} r_{x_s x_{s+1}} = \frac{1}{\lambda_\ast^{n-1}} \frac{\pi_{x_1}^\al \phi_{x_1}^\ea {\ev}_{x_n}}{Z_{\pi\phi} {\ev}_{x_1}} \prod_{s=1}^{n-1} p_{x_s x_{s+1}}^\al q^\ea_{x_s x_{s+1}} = \nonumber \\ 
+ & = \frac{1}{\lambda_\ast^{n-1}} \exp \left(\sum_{s=1}^{n-1} \left[ \al \ln p_{x_s x_{s+1}} + (\ea) \ln q_{x_s x_{s+1}} \right] + \ln \frac{\pi_{x_1}^\al \phi_{x_1}^\ea {\ev}_{x_n}}{Z_{\pi\phi} {\ev}_{x_1}}  \right) = \nonumber \\
+ & = \frac{1}{\lambda_\ast^{n-1}} \exp \left( \left\lbrace \sum_{s=1}^{n-1} \ln q_{x_s x_{s+1}} \right\rbrace + \al \sum_{s=1}^{n-1} \left[ \ln p_{x_s x_{s+1}} - \ln q_{x_s x_{s+1}} \right] + \ln \frac{\pi_{x_1}^\al \phi_{x_1}^\ea {\ev}_{x_n}}{Z_{\pi\phi} {\ev}_{x_1}}  \right). 
+\end{align}
+
+Устремим $n \rightarrow \infty,$ $\displaystyle \ln \frac{\pi_{x_1}^\al \phi_{x_1}^\ea {\ev}_{x_n}}{Z_{\pi\phi} {\ev}_{x_1}} = \mathcal{O}(1), $ а тогда $r(x)$ -- это асимптотически экспоненциальное семейство конечномерных распределений $\mathrm{MC}_\mathcal{D}(Z_{\pi\phi}^{-1} \pi^\al \phi^\ea, \mathcal{R}(\alpha))$ с естественным параметром $\theta = \al \in \R$ и двойственным параметром $\eta = (n - 1)\frac{\mathrm{d}}{\mathrm{d} \al} \ln \lambda_\ast.$
+
+Одномерное экспоненциальное семейство переходных вероятностей с естественным параметром $\al$ тогда будет иметь вид:
+
+\begin{align}
+r_{ij} & = \frac{1}{Z(\al)} \exp \left( h_0 (i,j) + \al h_1 (i,j) + \ell_1(j, \al) - \ell_2 (i, \al) \right),\  \textit{где}\\
+& Z(\al) = \lambda_\ast\\
+& h_0 (i ,j) = \ln q_{i j}\\
+& h_1 (i ,j) = \ln p_{i j} - \ln q_{i j}\\
+& \ell_1(j, \al) = \ln {\ev}_j\\
+& \ell_2(i, \al) = \ln {\ev}_i
+\end{align}

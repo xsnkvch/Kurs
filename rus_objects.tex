@@ -1,0 +1,131 @@
+
+%%%%%%%%%% Перенос формул на следующую строку (дублирование знаков) %%%%%%
+\mathcode`\+="8000 {\catcode`\+=13
+\global\def+{\mathchar"202B\discretionary{}{\rm\char'53}{}}
+%\global\def+{\discretionary{\rm\char'53}{}{}\mathchar"202B}
+}
+
+\mathcode`\=="8000 {\catcode`\==13
+\global\def={\mathchar"303D\discretionary{}{\rm\char"3D}{}} }
+
+\mathcode`\-="8000 {\catcode`\-=13
+\global\def-{\mathchar"2200\discretionary{}{\the\textfont2\char"00}{}} }
+
+\mathcode`\<="8000 {\catcode`\<=13
+\global\def<{\mathchar"313C\discretionary{}{\the\textfont1\char"3C}{}} }
+
+\mathcode`\>="8000 {\catcode`\>=13
+\global\def>{\mathchar"313E\discretionary{}{\the\textfont1\char"3E}{}} }
+
+\global\def\subset{\mathchar"321A\discretionary{}{\the\textfont2\char"1A}{}}
+\global\def\supset{\mathchar"321B\discretionary{}{\the\textfont2\char"1B}{}}
+\global\def\in{\mathchar"3232\discretionary{}{\the\textfont2\char"32}{}}
+\global\def\ni{\mathchar"3233\discretionary{}{\the\textfont2\char"33}{}}
+\global\def\star{\mathchar"213F\discretionary{}{\the\textfont1\char"3F}{}}
+\global\def\equiv{\mathchar"3211\discretionary{}{\the\textfont2\char"11}{}}
+\global\def\ge{\mathchar"363E\discretionary{}{\the\textfont6\char"3E}{}}
+\global\def\le{\mathchar"3636\discretionary{}{\the\textfont6\char"36}{}}
+\global\def\cup{\mathchar"225B\discretionary{}{\the\textfont2\char"5B}{}}
+\global\def\cap{\mathchar"225C\discretionary{}{\the\textfont2\char"5C}{}}
+\global\def\to{\mathchar"3221\discretionary{}{\the\textfont2\char"21}{}}
+%\global\def\toto{\mathchar"3613\discretionary{}{\the\textfont6\char"13}{}}
+\global\def\bo{\mathchar"363C\discretionary{}{\the\textfont6\char"3C}{}}
+\global\def\me{\mathchar"3634\discretionary{}{\the\textfont6\char"34}{}}
+\global\def\pm{\mathchar"2206\discretionary{}{\the\textfont2\char"06}{}}
+\global\def\mp{\mathchar"2207\discretionary{}{\the\textfont2\char"07}{}}
+\global\def\times{\mathchar"2202\discretionary{}{\the\textfont2\char"02}{}}
+
+
+\global\def\defeq{:=\discretionary{}{\rm:=}{}}
+\global\def\eqdef{=\colon\discretionary{}{\rm=:}{}}
+\global\def\ne{\not=\discretionary{}{\the\textfont2\char"36\rm=}{}}
+\global\def\noin{\notin\discretionary{}
+{\textrm{$\notin$}\kern-2pt}{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Конец переноса формул %%%%%%%%%%%%%%%%%%%%5
+
+%\def \No {${\cal N}^{\underline{\circ}}\!$}
+%\newfont{\wncyr}{wncyr10 at 14,4 pt}  % шрифт для номера, табл. 75
+%\newcommand \No {{\wncyr \symbol{125}}}
+
+\def \kk {\varkappa}
+%{\textrm{\bf c}} %{\textrm{\bf \msbm \symbol{123}}}  % kappa
+
+\def \su {\\[+0.3ex]}  % строка перед низкой формулой
+\def \sv {\\[+1.3ex]}  % строка перед высокой формулой
+\def \sn {\\[-0.7ex]}  % обычная строка
+\def \sk {\\[+0.4ex]}  % строка после высокой формулы
+\def \sa {\\[-4ex]}    % строка перед новым абзацем
+\def \sd {\\[-4.5ex]}  % строка между низкими формулами
+\def \sh {\\[-1.6ex]}  % строка между высокими формулами
+\def \sm {\\[-2.5ex]}  % строка между низкой и~высокой формулами
+
+%\lineskip 1pt            % \lineskip is 1pt for all font sizes.
+%\normallineskip 1pt
+%\def\baselinestretch{1}
+
+\newfont{\msbm}{msbm10}  % шрифт ажурный
+%\newcommand \C {\textrm{\msbm \symbol{67}}}
+\newcommand \N {\textrm{\msbm \symbol{78}}}
+\newcommand \B {\textrm{\msbm \symbol{66}}}
+\newcommand \aO {\textrm{\msbm \symbol{79}}}
+\newcommand \R {\textrm{\msbm \symbol{82}}}
+\newcommand \Z {\textrm{\msbm \symbol{90}}}
+%\newcommand \k {\textrm{\msbm \symbol{123}}}  % kappa
+\newfont{\msam}{msam10}  % дополнительные знаки, стрелки, табл. 71
+\newcommand \toto {\textrm{\msam \symbol{19}}}% равномерное стремление
+
+\newfont{\eusmfont}{eusm10}  % шрифт рукописный, табл. 65а
+\newfont{\eusmifont}{eusm8}  % шрифт рукописный индексный, табл. 65а
+
+\newcommand{\tr}{\mathop{\rm tr}\nolimits}
+\newcommand{\const}{\mathop{\rm const}\nolimits}
+\newcommand{\diag}{\mathop{\rm diag}\nolimits}
+\newcommand{\dist}{\mathop{\rm dist}\nolimits}
+\newcommand{\grad}{\mathop{\rm grad}\nolimits}
+\newcommand{\rank}{\mathop{\rm rank}\nolimits}
+\newcommand{\rang}{\mathop{\rm rang}\nolimits}
+\newcommand{\rot}{\mathop{\rm rot}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sgn}\nolimits}
+\newcommand{\supp}{\mathop{\rm supp}\nolimits}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% отечественные знаки неравенств малые                                                                         %
+\newcommand \ile {\mathbin{\raisebox{0,2mm}[-0,2mm]{\msami \symbol{54}}}}%             %
+\newcommand \ige {\mathbin{\raisebox{0,2mm}[-0,2mm]{\msami \symbol{62}}}}%             %
+                                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     отечественные знаки неравенств
+                                                                   %
+\renewcommand \le {\mathbin{\textrm{\msam \symbol{54}}}}             %
+\renewcommand \ge {\mathbin{\textrm{\msam \symbol{62}}}}             %
+\renewcommand \leq {\mathbin{\textrm{\msam \symbol{54}}}}            %
+\renewcommand \geq {\mathbin{\textrm{\msam \symbol{62}}}}            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sloppy
+
+%
+% ЯЗЫК РУССКИЙ
+%
+% МАТЕМАТИЧЕСКИЕ ОБЪЕКТЫ
+%
+\language=1
+\newtheorem{ttt}{\hspace{\parindent}Теорема}[part]
+\newtheorem{col}{\hspace{\parindent}Следствие}[section]
+\newtheorem{lem}{\hspace{\parindent}Лемма}[part]
+\newtheorem{ass}{\hspace{\parindent}Утверждение}[part]
+\newtheorem{rem}{\hspace{\parindent}Замечание}[section]
+\newtheorem{prim}{\hspace{\parindent}Пример}[section]
+\newtheorem{prp}{\hspace{\parindent}Предложение}[section]
+\newtheorem{opr}{\hspace{\parindent}Определение}[section]
+
+
+\renewcommand{\thelem}{\arabic{lem}}
+\renewcommand{\theass}{\arabic{ass}}
+\renewcommand{\therem}{\arabic{rem}}
+\renewcommand{\theprp}{\arabic{prp}}
+\renewcommand{\thettt}{\arabic{ttt}}
+\renewcommand{\thecol}{\arabic{col}}
+\renewcommand{\theprim}{\arabic{prim}}
+\renewcommand{\theopr}{\arabic{opr}}
