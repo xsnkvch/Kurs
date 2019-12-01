@@ -1,49 +1,33 @@
 
 %отступы
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[left=3cm,right=1cm,top=2cm,bottom=2cm]{geometry}
 
 \emergencystretch=5pt 
-\mathsurround=2pt   
-\parindent 9.3mm   
+\mathsurround=2pt  
 \righthyphenmin=2
+
+\setcounter{secnumdepth}{2}
 
 \usepackage{indentfirst} % Красная строка после заголовка
 \setlength\parindent{1.25cm}
 
 \usepackage[final]{pdfpages}
 
-\pagestyle{headings}
-\usepackage{booktabs}
-
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{n}{n}
 
-\usepackage{rotating}
-
-\usepackage{misccorr}
-\usepackage{listings}
-\lstset{
-%   language=Python,
-    basicstyle=\footnotesize\ttfamily,
-    keywordstyle=\bfseries,
-    showstringspaces=false,
-%    breaklines=true
-}
+%\usepackage{misccorr}
 
 \linespread{1.} % полуторный промежуток между строками
 
-\usepackage{booktabs}
-
 \usepackage{amsfonts,amssymb,eucal}
+\usepackage{amsthm}
 \usepackage[intlimits]{amsmath}
-\usepackage{graphicx}
 \usepackage{delarray}
+%таблицы
+\usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{multirow}
-\usepackage{fancyheadings}
-\usepackage{pgfplots}
-\pgfplotsset{width=12cm}
-
-\usepackage{amsthm}
+\usepackage{rotating}
 
 %Стиль страницы
 \usepackage{fancyhdr}
@@ -55,9 +39,6 @@
 \defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
 \setmainfont[Ligatures={TeX,Historic}]{CMU Serif} %% задаёт основной шрифт документа
 
-
 %%%% языковая верстка при PdfLatex
 %\usepackage[utf8]{inputenc}
 %\usepackage[russian]{babel}
-
-\setcounter{page}{1}  % номер первой страницы журнала

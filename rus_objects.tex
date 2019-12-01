@@ -34,22 +34,12 @@
 \global\def\pm{\mathchar"2206\discretionary{}{\the\textfont2\char"06}{}}
 \global\def\mp{\mathchar"2207\discretionary{}{\the\textfont2\char"07}{}}
 \global\def\times{\mathchar"2202\discretionary{}{\the\textfont2\char"02}{}}
-
-
 \global\def\defeq{:=\discretionary{}{\rm:=}{}}
 \global\def\eqdef{=\colon\discretionary{}{\rm=:}{}}
 \global\def\ne{\not=\discretionary{}{\the\textfont2\char"36\rm=}{}}
-\global\def\noin{\notin\discretionary{}
-{\textrm{$\notin$}\kern-2pt}{}}
+\global\def\noin{\notin\discretionary{}{\textrm{$\notin$}\kern-2pt}{}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Конец переноса формул %%%%%%%%%%%%%%%%%%%%5
-
-%\def \No {${\cal N}^{\underline{\circ}}\!$}
-%\newfont{\wncyr}{wncyr10 at 14,4 pt}  % шрифт для номера, табл. 75
-%\newcommand \No {{\wncyr \symbol{125}}}
-
-\def \kk {\varkappa}
-%{\textrm{\bf c}} %{\textrm{\bf \msbm \symbol{123}}}  % kappa
 
 \def \su {\\[+0.3ex]}  % строка перед низкой формулой
 \def \sv {\\[+1.3ex]}  % строка перед высокой формулой
@@ -62,10 +52,6 @@
 
 %\newcommand \k {\textrm{\msbm \symbol{123}}}  % kappa
 \newfont{\msam}{msam10}  % дополнительные знаки, стрелки, табл. 71
-\newcommand \toto {\textrm{\msam \symbol{19}}}% равномерное стремление
-
-\newfont{\eusmfont}{eusm10}  % шрифт рукописный, табл. 65а
-\newfont{\eusmifont}{eusm8}  % шрифт рукописный индексный, табл. 65а
 
 \newcommand{\tr}{\mathop{\rm tr}\nolimits}
 \newcommand{\const}{\mathop{\rm const}\nolimits}
@@ -108,7 +94,6 @@
 \newtheorem{prim}{\hspace{\parindent}Пример}[section]
 \newtheorem{prp}{\hspace{\parindent}Предложение}[section]
 \newtheorem{opr}{\hspace{\parindent}Определение}[section]
-
 
 \renewcommand{\thelem}{\arabic{lem}}
 \renewcommand{\theass}{\arabic{ass}}
