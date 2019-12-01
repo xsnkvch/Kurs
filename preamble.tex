@@ -50,7 +50,7 @@
 \pagestyle{plain}
 
 % языковая верстка при XeLatex
-\usepackage{polyglossia}
+\usepackage[main=russian,english]{babel}   %% загружает пакет многоязыковой вёрстки
 \usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
 \defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
 \setmainfont[Ligatures={TeX,Historic}]{CMU Serif} %% задаёт основной шрифт документа
@@ -60,4 +60,4 @@
 %\usepackage[utf8]{inputenc}
 %\usepackage[russian]{babel}
 
-\setcounter{page}{2}  % номер первой страницы журнала
+\setcounter{page}{1}  % номер первой страницы журнала

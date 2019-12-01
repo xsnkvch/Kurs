@@ -1,51 +1,17 @@
+\subsection{Случай $\mathrm{MC}_\B$}
 
-\section{Случай одномерного экспоненциального семейства двоичных цепей Маркова первого порядка $\mathrm{MC}_\B$}
-
-
-Стохастические матрицы $P$ и $Q$ в двумерном многообразии двоичных цепей Маркова первого порядка можно однозначно определить параметрами $p = (p_0, p_1), q = (q_0, q_1).$ Будем рассматривать $p, q \in (0, 1)^2.$
-
+Характеристический многочлен матрицы $R$ в обозначениях \eqref{R_1}
 \begin{equation}
-\label{PQ_first}
-P = \begin{pmatrix}
-p_0 & 1 - p_0 \\
-p_1 & 1 - p_1 \\
-\end{pmatrix}, \ 
-Q = \begin{pmatrix}
-q_0 & 1 - q_0 \\
-q_1 & 1 - q_1 \\
-\end{pmatrix}. \ 
-\end{equation}  
-
-Тогда по \eqref{R_elements_eq} 
-\begin{equation}
-\label{R_1}
-R_\al = \begin{pmatrix}
-p_0^\al q_0^\ea & (1 - p_0)^\al (1 - q_0)^\ea \\
-p_1^\al q_1^\ea & (1 - p_1)^\al (1 - q_1)^\ea \\
-\end{pmatrix} = 
-\begin{pmatrix}
-\gamma & \mu \\
-\xi & \psi \\
-\end{pmatrix}, \quad \gamma, \mu, \xi, \psi > 0.
+ \varphi_1(\lambda) = \lambda^2 - (\gamma + \psi)\lambda + (\gamma \psi - \mu \xi).
 \end{equation}
 
-Характеристический многочлен матрицы \eqref{R_1} $\varphi_1(\lambda) = \lambda^2 - (\gamma + \psi)\lambda + (\gamma \psi - \mu \xi).$
-
-Очевидно, что $R_\alpha$ неразложима, по теореме \ref{T-Perr_Fro} $\lambda_\ast$ существует, а т.к. $\deg \varphi_1(\lambda) = 2,$ то $\lambda_\ast$ выражается аналитически через дискриминант:
+$\deg \varphi_1(\lambda) = 2,$ собственное значение Перрона-Фробениуса $\lambda_\ast$ выражается аналитически через дискриминант:
 
 \begin{equation}
 \label{L1_to_simp}
 \lambda_\ast = \frac{1}{2} \left[ \gamma + \psi + \sqrt{(\gamma + \psi)^2 - 4 (\gamma \psi - \mu \xi)} \right] = \frac{1}{2} \left[ \gamma + \psi + \sqrt{(\gamma - \psi)^2 + 4 \mu \xi} \right]
 \end{equation}
 
-Тогда в общем случае для матриц $R_\alpha,$ построенных по матрицам \eqref{PQ_first}, сз Перрона-Фробениуса выражается как:
-
-\begin{multline}
-\label{L1}
-\lambda_\ast = \frac{1}{2}
-\Big[ p_0^\al q_0^{1-\alpha} + (1 - p_1)^\alpha (1 - q_1)^{1 - \alpha} + \\
-+ \left\lbrace (p_0^\alpha q_0^{1-\alpha} - (1 - p_1)^\alpha (1 - q_1)^{1 - \alpha})^2 + 4 p_1^\alpha q_1^{1-\alpha} (1 - p_0)^\alpha (1 - q_0)^{1 - \alpha}   \right\rbrace^\frac{1}{2} \Big]
-\end{multline}
 Найдем теперь модели, которые будут упрощать выражение \eqref{L1_to_simp}.
 
 \begin{lem}
@@ -92,58 +58,18 @@ p_0^\alpha q_0^{1-\alpha} = (1 - p_1)^\alpha (1 - q_1)^{1-\alpha} \  \forall \al
 \lambda_\ast = p_0^\alpha q_0^{1-\alpha} + (1 - p_0)^\alpha (1 - q_0)^{1-\alpha}, \textsl{если } p_0 = 1 - p_1 \wedge q_0 = 1 - q_1.
 \end{equation}
 
-\section{Случай одномерного экспоненциального семейства двоичных цепей Маркова второго порядка $MC_{\B^2}$}
+\subsection{Случай $\MC_{\B^2}$}
 
-Аналогично случаю $\mathrm{MC}_\B,$  $P$ и $Q$ будем определять параметрами $p = (p_{00}, p_{01}, p_{10}, p_{11}), q = (q_{00}, q_{01}, q_{10}, q_{11}).$ Будем рассматривать $p, q \in (0, 1)^4.$
-
-
-\begin{equation}
-\label{PQ_first}
-P = \begin{pmatrix}
-p_{00} & 1 - p_{00} & 0 & 0 \\
-0 & 0 & p_{01} & 1 - p_{01} \\
-p_{10} & 1 - p_{10} & 0 & 0 \\
-0 & 0 & p_{11} & 1 - p_{11} \\
-\end{pmatrix}, \ 
-Q = \begin{pmatrix}
-q_{00} & 1 - q_{00} & 0 & 0 \\
-0 & 0 & q_{01} & 1 - q_{01} \\
-q_{10} & 1 - q_{10} & 0 & 0 \\
-0 & 0 & q_{11} & 1 - q_{11} \\
-\end{pmatrix}. \ 
-\end{equation}  
-
-Тогда по \eqref{R_elements_eq} 
-\begin{align}
-\label{R_2}
-& R_\alpha = 
-\begin{pmatrix}
-\Gamma & \Delta & 0 & 0 \\
-0 & 0 & \Phi & \Psi \\
-\Pi & \Upsilon & 0 & 0 \\
-0 & 0 & \Sigma & \Omega \\
-\end{pmatrix}, \\
-& \Gamma = p_{00}^\al q_{00}^\ea, \quad \Delta = (1 - p_{00})^\al(1 - q_{00})^\ea, \nonumber \\
-& \Phi = p_{01}^\al q_{01}^\ea, \quad \Psi = (1 - p_{01})^\al(1 - q_{01})^\ea, \nonumber \\
-& \Pi = p_{10}^\al q_{10}^\ea, \quad \Upsilon = (1 - p_{10})^\al(1 - q_{10})^\ea, \nonumber \\
-& \Sigma = p_{11}^\al q_{11}^\ea, \quad \Omega = (1 - p_{11})^\al(1 - q_{11})^\ea. \nonumber
-\end{align} 
-
-Характеристический многочлен матрицы \eqref{R_2}: 
-\begin{multline}
-\varphi_2(\lambda) = \lambda^4 - (\Gamma + \Omega)\lambda^3 + (\Gamma \Omega -\Phi \Upsilon)\lambda^2 + (\Gamma \Phi \Upsilon + \Omega \Phi \Upsilon - \Delta \Pi \Phi - \Psi \Sigma \Upsilon)\lambda + \\ + (\Omega \Phi - \Psi \Sigma)(\Delta \Pi - \Gamma \Upsilon).
+Характеристический многочлен матрицы \eqref{R_2_Matr}: 
+\begin{multline} \label{char_poly_2}
+\varphi_2(\lambda) = \lambda^4 - (\Gamma + \Theta)\lambda^3 + (\Gamma \Theta -\Phi \Upsilon)\lambda^2 + (\Gamma \Phi \Upsilon + \Theta \Phi \Upsilon - \Delta \Pi \Phi - \Psi \Sigma \Upsilon)\lambda + \\ + (\Theta \Phi - \Psi \Sigma)(\Delta \Pi - \Gamma \Upsilon).
 \end{multline}
 
-\begin{lem}
-Матрица \eqref{R_2} является неразложимой. 
-\end{lem}
-{\bf\it Доказательство.}  Доказывается простым перебором. $\blacksquare$
+Т. к. $\varphi_2 (\lambda)$ полином четвертой степени, в общем случае метод Феррари для аналитического нахождения корней очень сложен. Модели, для которых $\la$ выражается аналитически проще будем искать из вида \eqref{char_poly_2}.  
 
-\vspace{1em}
-
-{\bf 1.} Пусть $\Gamma \Omega - \Phi \Upsilon = 0 \Longleftrightarrow p_{00} (1-p_{11}) = p_{01}(1-p_{10}) \wedge q_{00} (1-q_{11}) = q_{01}(1-q_{10}),$ для простоты сокращения будем рассматривать решения: 
+{\bf 1.} Пусть $\Gamma \Theta - \Phi \Upsilon = 0 \Longleftrightarrow p_{00} (1-p_{11}) = p_{01}(1-p_{10}) \wedge q_{00} (1-q_{11}) = q_{01}(1-q_{10}),$ для простоты сокращения будем рассматривать решения: 
  
-{\bf \quad a)} $\Gamma = \Phi, \Omega = \Upsilon:$  
+{\bf \quad a)} $\Gamma = \Phi, \Theta = \Upsilon:$  
 \begin{equation}
 \label{MC2_2_1}
 p_{00} = p_{01} \wedge p_{11} = p_{10} \wedge q_{00} = q_{01} \wedge q_{11} = q_{10},
@@ -151,28 +77,28 @@ p_{00} = p_{01} \wedge p_{11} = p_{10} \wedge q_{00} = q_{01} \wedge q_{11} = q_
 по лемме \ref{RESHEN_2} $\Delta = \Psi, \Pi = \Sigma.$ Преобразуем $\varphi_2(\lambda):$
 
 \begin{multline*}
-\varphi_2(\lambda) = \lambda^4 - (\Gamma + \Omega)\lambda^3 + (\Gamma \Omega - \Delta \Pi)(\Gamma + \Omega)\lambda - (\Gamma \Omega - \Delta \Pi)^2 = \\ =(\lambda^2 + \Delta \Pi - \Gamma \Omega) (\lambda^2 - (\Gamma + \Omega)\lambda + \Gamma \Omega - \Delta \Pi).
+\varphi_2(\lambda) = \lambda^4 - (\Gamma + \Theta)\lambda^3 + (\Gamma \Theta - \Delta \Pi)(\Gamma + \Theta)\lambda - (\Gamma \Theta - \Delta \Pi)^2 = \\ =(\lambda^2 + \Delta \Pi - \Gamma \Theta) (\lambda^2 - (\Gamma + \Theta)\lambda + \Gamma \Theta - \Delta \Pi).
 \end{multline*}
 
 \begin{equation}
-\lambda_\ast = \frac{1}{2} \left[ \Gamma + \Omega + \sqrt{(\Gamma - \Omega)^2 + 4\Delta \Pi}\right],\quad \textsl{если \eqref{MC2_2_1}}
+\lambda_\ast = \frac{1}{2} \left[ \Gamma + \Theta + \sqrt{(\Gamma - \Theta)^2 + 4\Delta \Pi}\right],\quad \textrm{если \eqref{MC2_2_1}}
 \end{equation}
 
-{\bf \quad b)} $\Gamma = \Upsilon, \Omega = \Phi$ не дает простого <<аналитичного>>  решения.
+{\bf \quad b)} $\Gamma = \Upsilon, \Theta = \Phi$ не дает простого <<аналитичного>>  решения.
 
-{\bf 2.} Пусть $\Gamma \Phi \Upsilon + \Omega \Phi \Upsilon - \Delta \Pi \Phi - \Psi \Sigma \Upsilon = 0,$ рассмотрим: 
+{\bf 2.} Пусть $\Gamma \Phi \Upsilon + \Theta \Phi \Upsilon - \Delta \Pi \Phi - \Psi \Sigma \Upsilon = 0,$ рассмотрим: 
  
-{\bf 2.1.} $\Omega \Phi = \Sigma \Psi \wedge \Gamma \Upsilon = \Delta \Pi$
+{\bf 2.1.} $\Theta \Phi = \Sigma \Psi \wedge \Gamma \Upsilon = \Delta \Pi$
 
-{\bf a)} $\Omega = \Sigma \wedge \Phi = \Psi \wedge \Gamma = \Delta \wedge \Upsilon = \Pi$\\
+{\bf a)} $\Theta = \Sigma \wedge \Phi = \Psi \wedge \Gamma = \Delta \wedge \Upsilon = \Pi$\\
 Вырожденный случай при $p_{ij}=q_{ij}=1/2, i,j \in {0, 1}.$ Все семейство -- одна цепь Маркова. $\lambda_\ast = 1.$
 
-{\bf b)} $\Omega = \Sigma \wedge \Phi = \Psi \wedge \Gamma = \Pi \wedge \Upsilon = \Delta.$\\
+{\bf b)} $\Theta = \Sigma \wedge \Phi = \Psi \wedge \Gamma = \Pi \wedge \Upsilon = \Delta.$\\
 \begin{equation}
 \label{MC2_3_1}
 p_{00} = p_{10} \wedge q_{00} = q_{10} \wedge p_{01}=p_{11}=q_{11}=q_{01}=1/2.
 \end{equation}
-Тогда $\Omega = \Sigma = \Phi = \Psi = 1/2.$
+Тогда $\Theta = \Sigma = \Phi = \Psi = 1/2.$
 
 \begin{equation*}
 \varphi_2(\lambda) = \lambda^4 - (\Gamma + \frac{1}{2})\lambda^3 + \frac{1}{2}(\Gamma - \Delta)\lambda^2.
@@ -181,21 +107,21 @@ p_{00} = p_{10} \wedge q_{00} = q_{10} \wedge p_{01}=p_{11}=q_{11}=q_{01}=1/2.
 Является частным случаем модели {\bf a)}.
 
 
-{\bf c)} $\Omega = \Psi \wedge \Phi = \Sigma \wedge \Gamma = \Pi \wedge \Upsilon = \Delta.$\\
+{\bf c)} $\Theta = \Psi \wedge \Phi = \Sigma \wedge \Gamma = \Pi \wedge \Upsilon = \Delta.$\\
 \begin{equation}
 \label{MC2_3_3}
 p_{01} = p_{11} \wedge q_{01} = q_{11} \wedge p_{00} = p_{10} \wedge q_{00} = q_{10}
 \end{equation}
 
 \begin{equation*}
-\varphi_2(\lambda) = \lambda^4 - (\Gamma + \Omega)\lambda^3 + (\Gamma \Omega - \Phi \Delta)\lambda^2.
+\varphi_2(\lambda) = \lambda^4 - (\Gamma + \Theta)\lambda^3 + (\Gamma \Theta - \Phi \Delta)\lambda^2.
 \end{equation*}
 
 \begin{equation}
-\lambda_\ast = \frac{1}{2} \left[ \Gamma + \Omega + \sqrt{(\Omega - \Gamma)^2 + 4\Phi\Delta}\right], \textsl{если \eqref{MC2_3_3}}.
+\lambda_\ast = \frac{1}{2} \left[ \Gamma + \Theta + \sqrt{(\Theta - \Gamma)^2 + 4\Phi\Delta}\right], \textsl{если \eqref{MC2_3_3}}.
 \end{equation}
 
-{\bf d)} $\Omega = \Psi \wedge \Phi = \Sigma \wedge \Gamma = \Delta \wedge \Upsilon = \Pi.$\\
+{\bf d)} $\Theta = \Psi \wedge \Phi = \Sigma \wedge \Gamma = \Delta \wedge \Upsilon = \Pi.$\\
 \begin{equation}
 \label{MC2_3_2}
 p_{01} = p_{11} \wedge q_{01} = q_{11} \wedge p_{00}=p_{01}=q_{00}=q_{10}=1/2.
@@ -203,20 +129,20 @@ p_{01} = p_{11} \wedge q_{01} = q_{11} \wedge p_{00}=p_{01}=q_{00}=q_{10}=1/2.
 Тогда $\Gamma = \Delta = \Pi = \Upsilon = 1/2.$
 
 \begin{equation*}
-\varphi_2(\lambda) = \lambda^4 - (\Omega + \frac{1}{2})\lambda^3 + \frac{1}{2}(\Omega - \Phi)\lambda^2.
+\varphi_2(\lambda) = \lambda^4 - (\Theta + \frac{1}{2})\lambda^3 + \frac{1}{2}(\Theta - \Phi)\lambda^2.
 \end{equation*}
 
 Является частным случаем модели {\bf c)}.
 
-{\bf 2.2.} $\Omega \Upsilon = \Delta \Pi \wedge \Gamma \Phi = \Psi \Sigma$
+{\bf 2.2.} $\Theta \Upsilon = \Delta \Pi \wedge \Gamma \Phi = \Psi \Sigma$
 
-{\bf a)} $\Omega = \Delta \wedge \Upsilon = \Pi \wedge \Gamma = \Psi \wedge \Phi = \Sigma$
+{\bf a)} $\Theta = \Delta \wedge \Upsilon = \Pi \wedge \Gamma = \Psi \wedge \Phi = \Sigma$
 
-{\bf b)} $\Omega = \Pi \wedge \Upsilon = \Delta \wedge \Gamma = \Sigma \wedge \Phi = \Psi$
+{\bf b)} $\Theta = \Pi \wedge \Upsilon = \Delta \wedge \Gamma = \Sigma \wedge \Phi = \Psi$
 
-{\bf c)} $\Omega = \Delta \wedge \Upsilon = \Pi \wedge \Gamma = \Sigma \wedge \Phi = \Psi$
+{\bf c)} $\Theta = \Delta \wedge \Upsilon = \Pi \wedge \Gamma = \Sigma \wedge \Phi = \Psi$
 
-{\bf d)} $\Omega = \Pi \wedge \Upsilon = \Delta \wedge \Gamma = \Psi \wedge \Phi = \Sigma$
+{\bf d)} $\Theta = \Pi \wedge \Upsilon = \Delta \wedge \Gamma = \Psi \wedge \Phi = \Sigma$
 
 Модели со свойствами a) и c) не дают <<аналитичных>> сз. Модель со свойствами b) вырожденная и была описана в 2.1.a)
 
@@ -224,18 +150,20 @@ p_{01} = p_{11} \wedge q_{01} = q_{11} \wedge p_{00}=p_{01}=q_{00}=q_{10}=1/2.
 
 \begin{equation}
 \label{MC2_3_4}
-p_{00} = 1 - p_{01} = p_{10} = p_{11}, \textsl{аналогично } q_{ij}
+p_{00} = 1 - p_{01} = p_{10} = p_{11}, \textrm{аналогично } q_{ij}
 \end{equation}
 
-Тогда $\Gamma = \Psi = \Pi = \Sigma \wedge \Delta = \Phi = \Upsilon = \Omega.$
+Тогда $\Gamma = \Psi = \Pi = \Sigma \wedge \Delta = \Phi = \Upsilon = \Theta.$
 
 \begin{equation*}
 \varphi_2(\lambda) = \lambda^4 - (\Gamma + \Delta)\lambda^3 + (\Gamma \Delta - \Delta^2)\lambda^2 + (\Delta^3 - \Gamma^2 \Delta) = \lambda(\lambda - \Gamma - \Delta)(\lambda^2 + \Gamma \Delta - \Delta^2).
 \end{equation*}
 
 \begin{equation}
-\lambda_\ast = \Gamma + \Delta, \textsl{если \eqref{MC2_3_4}}.
+\lambda_\ast = \Gamma + \Delta, \textrm{если \eqref{MC2_3_4}}.
 \end{equation}
 
 Другие модели будем искать как похожие по структуре ограничений на $p_{ij}$ и $q_{ij}$.
 Все найденные <<аналитичные>> модели с ограничениями на $p_{ij}$ и $q_{ij}$ выписаны в пункте \ref{EXP_FAM_SECOND}.
+
+\clearpage
