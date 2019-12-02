@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt]{extarticle}
 	
 \input{preamble}
 \begin{document}
@@ -18,22 +18,31 @@
 \newcommand \la {{\lambda_\ast}}
 \newcommand \ev {{\mathbf{v}_\ast}}
 
+%\renewcommand*\contentsname{\centerline{СОДЕРЖАНИЕ}}
+%\tableofcontents
+%\clearpage
+
 \section{Основные понятия и определения}
 
-\input{osnovn}
+\input{sections/osnovn}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ????? название 
 \section{Одномерные экспоненциальные семейства одно\-родных двоичных цепей Маркова первого и второго порядков}
 
-\input{exp_fam_markov}
+\input{sections/exp_fam_markov}
 
 \section{Поиск <<аналитичных>> моделей по виду ха\-рак\-те\-ристического полинома матрицы $R$}
 
-\input{by_char_poly}
+\input{sections/by_char_poly}
 
 \section{Найденные <<аналитичные>> модели}
 
-\input{found_models_not_transposed}
+\input{sections/found_models_not_transposed}
+
+\clearpage
+
+\anonsection{Список использованной литературы}
+
+\input{sections/liter}
 
 \end{document}
-

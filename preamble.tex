@@ -38,7 +38,14 @@
 \usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
 \defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
 \setmainfont[Ligatures={TeX,Historic}]{CMU Serif} %% задаёт основной шрифт документа
+\newfontfamily\cyrillicfont{CMU Serif}
 
 %%%% языковая верстка при PdfLatex
 %\usepackage[utf8]{inputenc}
 %\usepackage[russian]{babel}
+
+\newcommand{\anonsection}[1]{
+    %\phantomsection % Корректный переход по ссылкам в содержании
+    \section*{\centerline{\MakeUppercase{#1}}\vspace{1em}}
+    %\addcontentsline{toc}{section}{#1}
+}
